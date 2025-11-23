@@ -9,7 +9,6 @@ TestResults/
 */GeneratedTests/
 
 ## Ignore Selenium WebDriver binaries (if downloaded manually)
-drivers/
 *.exe
 *.dll
 

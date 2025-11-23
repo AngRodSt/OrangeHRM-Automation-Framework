@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\drivers\\driverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\drivers\\driverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\README.md||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,37 +18,40 @@
       "DocumentGroups": [
         {
           "DockedHeight": 216,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-23T22:41:18.415Z",
+              "Title": "DriverFactory.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Drivers\\DriverFactory.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Drivers\\DriverFactory.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Drivers\\DriverFactory.cs",
+              "RelativeToolTip": "orangehrm-automation\\Drivers\\DriverFactory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T22:52:21.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-11-23T22:37:19.748Z",
-              "EditorCaption": ""
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-23T22:52:04.347Z"
             }
           ]
         }

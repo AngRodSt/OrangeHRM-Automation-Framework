@@ -25,7 +25,8 @@ namespace Orangehrm_Automation.Drivers
                 options.AddArgument("--start-maximized");
                 options.AddArgument("--disable-notifications");
                 options.AddArgument("--disable-infobars");
-                //options.AddArgument("--headless");
+                options.AddArgument("--headless");
+                options.AddArgument("--window-size=1920,1080");
                 driver.Value = new ChromeDriver(options);
 
                 
