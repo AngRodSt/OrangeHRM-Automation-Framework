@@ -27,25 +27,3 @@
       | chart                             |
       | Employee Distribution by Sub Unit |
       | Employee Distribution by Location |
-
-#######################################################################
- #   @positive
- #   Scenario Outline: Verify navigation from dashboard to other modules
-  #    When I click on the "<module>" link on the dashboard
-   #   Then I should be redirected to the "<module>" page
-
-   #   Examples:
-    #    | module       |
-     #   | Admin        |
-      #  | PIM          |
-       # | Leave        |
-        #| Time         |
-      #  | Recruitment  |
-      #  | My Info      |
-      #  | Performance  |
-       # | Dashboard    |
-      #  | Directory    |
-      #  | Maintenance  |
-      #  | Claim        |
-       # | Buzz         |
-###########################################################################

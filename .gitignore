@@ -1,0 +1,74 @@
+## Ignore .NET build outputs
+bin/
+obj/
+out/
+TestResults/
+
+## Ignore SpecFlow generated files
+*.feature.cs
+*/GeneratedTests/
+
+## Ignore Selenium WebDriver binaries (if downloaded manually)
+drivers/
+*.exe
+*.dll
+
+## Ignore user-specific settings
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+## Ignore IDE folders (Visual Studio / Rider / VSCode)
+.vs/
+.idea/
+*.DotSettings
+
+## VSCode specific
+.vscode/
+.history/
+
+## Logs
+*.log
+logs/
+
+## Environment files
+*.env
+.env.*
+
+## NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+## System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+## Temporary files
+*.tmp
+*.temp
+*.cache
+
+## Backup files
+*.bak
+*.orig
+
+## SpecFlow reports (optional)
+Reports/
+*.html
+
+## Coverage files
+coverage/
+*.coverage
+*.coveragexml
+coverage.json
+
+## Ignore browser artifacts
+selenium-screenshot.png
+selenium-traces/
+
+## JetBrains Rider
+*.iml
+.idea/

@@ -10,12 +10,13 @@ namespace Orangehrm_Automation.Pages
 {
     public class DashboardPage : BasePage
     {
-        //Dictionary
+        //Dictionary to hold dashboard elements and their locators
         private readonly Dictionary<string, By> DashboardElements;
         private readonly Dictionary<string, By> DashboardCharts;
       
         public DashboardPage(IWebDriver driver, bool initialize= true) : base(driver)
         {
+            // Initialize dictionaries for dashboard elements and charts
             DashboardElements = new Dictionary<string, By>(StringComparer.OrdinalIgnoreCase)
             {
                 { "Time at Work", TimeAtWorkText },
@@ -41,9 +42,12 @@ namespace Orangehrm_Automation.Pages
 
         private readonly By SubUnitChart = By.XPath("//p[text()='Employee Distribution by Sub Unit']/ancestor::div[contains(@class,'orangehrm-dashboard-widget')]//canvas");
         private readonly By LocationChart = By.XPath("//p[text()='Employee Distribution by Location']/ancestor::div[contains(@class,'orangehrm-dashboard-widget')]//canvas");
+        public readonly By dashboardText = By.XPath("//h6[text()='Dashboard']");
 
-        
-
+        public override bool IsPageLoaded()
+        {
+           return isVisible(dashboardText);
+        }
 
 
         //Methods to verify elements on Dashboard Page

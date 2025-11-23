@@ -1,23 +1,22 @@
-﻿Feature: MyInfo module Functionality
-	As an authenticated user
-	I want to access and update my personal information
-	So that I can keep my profile up to date
+﻿Feature: Personal Information Updates
+  As an employee
+  I want to update my personal information
+  So that my records are accurate and up-to-date
 
-	Background:
-		Given I am logged in as a valid user
-		And I am on the MyInfo page
+  Background:
+	Given I am logged in as a valid user
+	And I am on the My Info page
 
-	@positive
-	Scenario: Update personal details successfully
-		When I update my personal details with valid information
-		Then I should see a success message "Successfully Updated"
+	  
+	@positive @update
+  Scenario: Verify that the system shows a confirmation when changes are saved
+	When I update my personal details with First Name "<FirstName>", Middle Name "<MiddleName>", and Last Name "<LastName>"
+	Then I should see a success message "<SuccessMessage>"
 
-	@negative
-	Scenario: Attempt to update personal details with invalid data
-		When I update my personal details with invalid information
-		Then I should see an error message "Invalid data provided"
+	Examples: 
+	| FirstName | MiddleName | LastName | SuccessMessage       |
+	| John      | A.         | Doe      | Successfully Updated |
+	
 
-	@positive
-	Scenario: View personal details
-		When I navigate to the Personal Details section
-		Then I should see my current personal information displayed correctly
+		  
+	

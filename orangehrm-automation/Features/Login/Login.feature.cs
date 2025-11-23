@@ -119,11 +119,11 @@ namespace Orangehrm_Automation.Features.Login
         }
         
         [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("Successful login with various credentials")]
+        [global::NUnit.Framework.DescriptionAttribute("Successful login with valid credentials")]
         [global::NUnit.Framework.CategoryAttribute("smoke")]
         [global::NUnit.Framework.CategoryAttribute("positive")]
         [global::NUnit.Framework.TestCaseAttribute("Admin", "admin123", "0", null)]
-        public async global::System.Threading.Tasks.Task SuccessfulLoginWithVariousCredentials(string username, string password, string @__pickleIndex, string[] exampleTags)
+        public async global::System.Threading.Tasks.Task SuccessfulLoginWithValidCredentials(string username, string password, string @__pickleIndex, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "smoke",
@@ -137,7 +137,7 @@ namespace Orangehrm_Automation.Features.Login
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
             string pickleIndex = @__pickleIndex;
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Successful login with various credentials", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Successful login with valid credentials", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
 #line 10
@@ -235,7 +235,7 @@ namespace Orangehrm_Automation.Features.Login
     await testRunner.WhenAsync("I attempt to log in without entering credentials", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
 #line 30
-    await testRunner.ThenAsync("I should see an error message \"Required\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+    await testRunner.ThenAsync("I should see a required field error", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

@@ -34,6 +34,8 @@ namespace Orangehrm_Automation.Pages.Base
         }
 
         // Common actions
+
+        public abstract bool IsPageLoaded();
         protected void ClickElement(By locator)
         {
             WaitForElementClickable(locator).Click();
@@ -67,6 +69,9 @@ namespace Orangehrm_Automation.Pages.Base
         {
             return WaitForElementVisible(locator);
         }
+
+       
+
 
     }
 }

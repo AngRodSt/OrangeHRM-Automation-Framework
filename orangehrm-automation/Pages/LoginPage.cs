@@ -16,9 +16,13 @@ namespace Orangehrm_Automation.Pages
         private readonly By passwordInput = By.Name("password");
         private readonly By loginButton = By.CssSelector("button[type='submit']");
         private readonly By errorMessage = By.CssSelector(".oxd-alert-content-text");
-        private readonly By inputRequired = By.CssSelector(".oxd-input-field-error-message");
+        public readonly By loginText = By.XPath("//h5[text()='Login']");
 
         //Actions
+        public override bool IsPageLoaded()
+        {
+            return isVisible(loginText);
+        }
         public void NavigateToUrl(string url)
         {
             Driver.Navigate().GoToUrl(url);
@@ -45,14 +49,8 @@ namespace Orangehrm_Automation.Pages
             return GetText(errorMessage);
         }
 
-        public string GetInputRequiredMessage()
-        {
-            return GetText(inputRequired);
-        }
+ 
 
-        public bool IsDashboardDisplayed()
-        {
-            return isVisible(CommonLocators.dashboardText);
-        }
+       
     }
 }

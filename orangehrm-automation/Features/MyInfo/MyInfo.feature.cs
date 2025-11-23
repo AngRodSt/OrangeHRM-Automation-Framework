@@ -18,17 +18,17 @@ namespace Orangehrm_Automation.Features.MyInfo
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "3.0.0.0")]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::NUnit.Framework.TestFixtureAttribute()]
-    [global::NUnit.Framework.DescriptionAttribute("MyInfo module Functionality")]
+    [global::NUnit.Framework.DescriptionAttribute("Personal Information Updates")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
-    public partial class MyInfoModuleFunctionalityFeature
+    public partial class PersonalInformationUpdatesFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features/MyInfo", "MyInfo module Functionality", "\tAs an authenticated user\r\n\tI want to access and update my personal information\r\n" +
-                "\tSo that I can keep my profile up to date", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Features/MyInfo", "Personal Information Updates", "  As an employee\r\n  I want to update my personal information\r\n  So that my record" +
+                "s are accurate and up-to-date", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
 #line 1 "MyInfo.feature"
 #line hidden
@@ -107,34 +107,46 @@ namespace Orangehrm_Automation.Features.MyInfo
         public virtual async global::System.Threading.Tasks.Task FeatureBackgroundAsync()
         {
 #line 6
- #line hidden
+  #line hidden
 #line 7
-  await testRunner.GivenAsync("I am logged in as a valid user", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+ await testRunner.GivenAsync("I am logged in as a valid user", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
 #line 8
-  await testRunner.AndAsync("I am on the MyInfo page", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+ await testRunner.AndAsync("I am on the My Info page", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
         }
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/MyInfo/MyInfo.feature.ndjson", 5);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Features/MyInfo/MyInfo.feature.ndjson", 3);
         }
         
         [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("Update personal details successfully")]
+        [global::NUnit.Framework.DescriptionAttribute("Verify that the system shows a confirmation when changes are saved")]
         [global::NUnit.Framework.CategoryAttribute("positive")]
-        public async global::System.Threading.Tasks.Task UpdatePersonalDetailsSuccessfully()
+        [global::NUnit.Framework.CategoryAttribute("update")]
+        [global::NUnit.Framework.TestCaseAttribute("John", "A.", "Doe", "Successfully Updated", "0", null)]
+        public async global::System.Threading.Tasks.Task VerifyThatTheSystemShowsAConfirmationWhenChangesAreSaved(string firstName, string middleName, string lastName, string successMessage, string @__pickleIndex, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
-                    "positive"};
+            string[] @__tags = new string[] {
+                    "positive",
+                    "update"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            string pickleIndex = "0";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Update personal details successfully", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            argumentsOfScenario.Add("FirstName", firstName);
+            argumentsOfScenario.Add("MiddleName", middleName);
+            argumentsOfScenario.Add("LastName", lastName);
+            argumentsOfScenario.Add("SuccessMessage", successMessage);
+            string pickleIndex = @__pickleIndex;
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Verify that the system shows a confirmation when changes are saved", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 11
- this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line 12
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -144,83 +156,14 @@ namespace Orangehrm_Automation.Features.MyInfo
             {
                 await this.ScenarioStartAsync();
 #line 6
- await this.FeatureBackgroundAsync();
-#line hidden
-#line 12
-  await testRunner.WhenAsync("I update my personal details with valid information", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+  await this.FeatureBackgroundAsync();
 #line hidden
 #line 13
-  await testRunner.ThenAsync("I should see a success message \"Successfully Updated\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+ await testRunner.WhenAsync(string.Format("I update my personal details with First Name \"{0}\", Middle Name \"{1}\", and Last N" +
+                            "ame \"{2}\"", firstName, middleName, lastName), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("Attempt to update personal details with invalid data")]
-        [global::NUnit.Framework.CategoryAttribute("negative")]
-        public async global::System.Threading.Tasks.Task AttemptToUpdatePersonalDetailsWithInvalidData()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "negative"};
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            string pickleIndex = "1";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Attempt to update personal details with invalid data", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
-            string[] tagsOfRule = ((string[])(null));
-            global::Reqnroll.RuleInfo ruleInfo = null;
-#line 16
- this.ScenarioInitialize(scenarioInfo, ruleInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                await testRunner.SkipScenarioAsync();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 6
- await this.FeatureBackgroundAsync();
-#line hidden
-#line 17
-  await testRunner.WhenAsync("I update my personal details with invalid information", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 18
-  await testRunner.ThenAsync("I should see an error message \"Invalid data provided\"", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("View personal details")]
-        [global::NUnit.Framework.CategoryAttribute("positive")]
-        public async global::System.Threading.Tasks.Task ViewPersonalDetails()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "positive"};
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            string pickleIndex = "2";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("View personal details", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
-            string[] tagsOfRule = ((string[])(null));
-            global::Reqnroll.RuleInfo ruleInfo = null;
-#line 21
- this.ScenarioInitialize(scenarioInfo, ruleInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                await testRunner.SkipScenarioAsync();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 6
- await this.FeatureBackgroundAsync();
-#line hidden
-#line 22
-  await testRunner.WhenAsync("I navigate to the Personal Details section", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 23
-  await testRunner.ThenAsync("I should see my current personal information displayed correctly", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line 14
+ await testRunner.ThenAsync(string.Format("I should see a success message \"{0}\"", successMessage), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

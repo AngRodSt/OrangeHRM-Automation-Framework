@@ -15,6 +15,7 @@ namespace Orangehrm_Automation.StepDefinitions
     {
         private readonly ScenarioContext _scenarioCotext;
         private readonly LoginPage _loginPage;
+        private readonly DashboardPage _dashboardPage;
 
         public LoginSteps(ScenarioContext scenarioCotext)
         {
@@ -22,6 +23,7 @@ namespace Orangehrm_Automation.StepDefinitions
 
             var driver = _scenarioCotext["WebDriver"] as IWebDriver;
             _loginPage = new LoginPage(driver);
+            _dashboardPage = new DashboardPage(driver, false);
         }
 
         // Background step
@@ -29,7 +31,7 @@ namespace Orangehrm_Automation.StepDefinitions
         public void GivenIAmOnTheLoginPage()
         {
             _loginPage.NavigateToUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
+          
         }
 
         // Scenario Outline: Successful Login
@@ -47,23 +49,14 @@ namespace Orangehrm_Automation.StepDefinitions
         [Then(@"I should be redirected to the dashboard page")]
         public void ThenIShouldBeRedirectedToTheDashboardPage()
         {
-            Assert.That(_loginPage.IsDashboardDisplayed(), Is.True, "Dashboard is not displayed.");
+            Assert.That(_dashboardPage.IsPageLoaded(), Is.True, "Dashboard is not displayed.");
         }
 
         // Scenario Outline: Unsuccessful Login
         [Then(@"I should see an error message ""(.*)""")]
         public void ThenIShouldSeeAnErrorMessage(string expectedError)
         {
-            string actualMessage;
-
-            if (expectedError == "Required")
-            {
-                actualMessage = _loginPage.GetInputRequiredMessage();
-            }
-            else
-            {
-                actualMessage = _loginPage.GetErrorMessage();
-            }
+            string  actualMessage = _loginPage.GetErrorMessage();
 
             Assert.That(actualMessage, Is.EqualTo(expectedError), "Error message does not match.");
         }

@@ -7,7 +7,7 @@
     Given I am on the login page
 
   @smoke @positive
-  Scenario Outline: Successful login with various credentials
+  Scenario Outline: Successful login with valid credentials
     When I log in with username "<username>" and password "<password>"
     Then I should be redirected to the dashboard page
 
@@ -27,5 +27,5 @@
   @negative
   Scenario: Unsuccessful login with empty username
     When I attempt to log in without entering credentials
-    Then I should see an error message "Required"
+    Then I should see a required field error
      

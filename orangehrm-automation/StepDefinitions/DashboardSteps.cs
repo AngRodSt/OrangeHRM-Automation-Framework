@@ -25,22 +25,11 @@ namespace Orangehrm_Automation.StepDefinitions
 
         }
 
-        //Background steps
-        [Given(@"I am logged in as a valid user")]
-        public void GivenIAmLoggedInAsAValidUser()
-        {
-            _loginPage.NavigateToUrl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-            _loginPage.EnterUsername("Admin");
-            _loginPage.EnterPassword("admin123");
-            _loginPage.ClickLoginButton();
-            
-        }
-
         [Given(@"I am on the dashboard page")]
         public void GivenIAmOnTheDashboardPage()
         {
             // Verify login
-            if (!_loginPage.IsDashboardDisplayed())
+            if (!_dashboardPage.IsPageLoaded())
             {
                 throw new Exception("Login failed.");
             }
