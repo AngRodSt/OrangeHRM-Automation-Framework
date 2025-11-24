@@ -49,9 +49,16 @@ namespace Orangehrm_Automation.Pages
 
         public List<string> GetFirstNames()
         {
+
             var elements = Driver.FindElements(FirstNameCells);
             return elements.Select(e => e.Text.Trim()).ToList();
         }
+
+        public void WaitForNextPageToLoad(string previousFirstName)
+        {
+            WaitForElementTextToChange(FirstNameCells, previousFirstName);
+        }
+
 
         public bool AreNamesSortedAsc()
         {

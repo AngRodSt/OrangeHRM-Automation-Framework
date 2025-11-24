@@ -43,6 +43,20 @@ namespace Orangehrm_Automation.Pages.Base
             return _wait.Until(ExpectedConditions.ElementToBeClickable(locator));
         }
 
+
+        protected void WaitForElementTextToChange(By locator, string previousText)
+        {
+            _wait.Until(driver =>
+            {
+                var element = driver.FindElements(locator).FirstOrDefault();
+                if (element == null) return false;
+
+                var currentText = element.Text.Trim();
+                return currentText != previousText && currentText != "";
+            });
+        }
+
+
         // Common actions
 
         public abstract bool IsPageLoaded();
@@ -95,6 +109,8 @@ namespace Orangehrm_Automation.Pages.Base
         {
             return WaitForElementVisible(locator);
         }
+
+
 
        
 

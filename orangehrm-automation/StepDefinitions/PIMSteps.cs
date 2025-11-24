@@ -57,6 +57,8 @@ namespace Orangehrm_Automation.StepDefinitions
             _scenarioContext["EmployeeListBefore"] = before;
 
             _pIMPage.NavigateToNextPage();
+
+            _pIMPage.WaitForNextPageToLoad(before.First());
         }
 
         [Then(@"the next page of employees should be displayed")]
