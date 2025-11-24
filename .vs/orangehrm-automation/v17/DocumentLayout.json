@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\stepdefinitions\\adminsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\stepdefinitions\\adminsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\pages\\pimpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\pages\\pimpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\pages\\base\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\pages\\base\\basepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\hooks\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\stepdefinitions\\commonsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\stepdefinitions\\commonsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\support\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\support\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|c:\\users\\sthef\\documents\\programacion\\qa automation\\orangehrm-automation\\orangehrm-automation\\drivers\\driverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{460E198C-F7B0-4275-8095-EBD40BB35AEA}|orangehrm-automation\\orangehrm-automation.csproj|solutionrelative:orangehrm-automation\\drivers\\driverfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 216,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,24 +54,119 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{bdada759-5db7-402f-96e3-402b17c8c5b4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PIMPage.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\PIMPage.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Pages\\PIMPage.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\PIMPage.cs",
+              "RelativeToolTip": "orangehrm-automation\\Pages\\PIMPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:31:55.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\LoginPage.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Pages\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\LoginPage.cs",
+              "RelativeToolTip": "orangehrm-automation\\Pages\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:31:53.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BasePage.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\Base\\BasePage.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Pages\\Base\\BasePage.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Pages\\Base\\BasePage.cs",
+              "RelativeToolTip": "orangehrm-automation\\Pages\\Base\\BasePage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:31:39.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminSteps.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\StepDefinitions\\AdminSteps.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\StepDefinitions\\AdminSteps.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\StepDefinitions\\AdminSteps.cs",
+              "RelativeToolTip": "orangehrm-automation\\StepDefinitions\\AdminSteps.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:31:17.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hooks.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Hooks\\Hooks.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Hooks\\Hooks.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Hooks\\Hooks.cs",
+              "RelativeToolTip": "orangehrm-automation\\Hooks\\Hooks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:18:51.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommonSteps.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\StepDefinitions\\CommonSteps.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\StepDefinitions\\CommonSteps.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\StepDefinitions\\CommonSteps.cs",
+              "RelativeToolTip": "orangehrm-automation\\StepDefinitions\\CommonSteps.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:29:41.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Support\\Logger.cs",
+              "RelativeDocumentMoniker": "orangehrm-automation\\Support\\Logger.cs",
+              "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Support\\Logger.cs",
+              "RelativeToolTip": "orangehrm-automation\\Support\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T10:23:23.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DriverFactory.cs",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Drivers\\DriverFactory.cs",
               "RelativeDocumentMoniker": "orangehrm-automation\\Drivers\\DriverFactory.cs",
               "ToolTip": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\Drivers\\DriverFactory.cs",
               "RelativeToolTip": "orangehrm-automation\\Drivers\\DriverFactory.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T22:52:21.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -51,7 +174,8 @@
               "RelativeToolTip": ".gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-23T22:52:04.347Z"
+              "WhenOpened": "2025-11-23T22:52:04.347Z",
+              "EditorCaption": ""
             }
           ]
         }

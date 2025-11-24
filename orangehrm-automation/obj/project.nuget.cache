@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZF0CKEKoR3k=",
+  "dgSpecHash": "31YgjgxpLM8=",
   "success": true,
   "projectFilePath": "C:\\Users\\sthef\\Documents\\Programacion\\QA Automation\\orangehrm-automation\\orangehrm-automation\\orangehrm-automation.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,9 @@
     "C:\\Users\\sthef\\.nuget\\packages\\reqnroll.tools.msbuild.generation\\3.2.1\\reqnroll.tools.msbuild.generation.3.2.1.nupkg.sha512",
     "C:\\Users\\sthef\\.nuget\\packages\\selenium.support\\4.38.0\\selenium.support.4.38.0.nupkg.sha512",
     "C:\\Users\\sthef\\.nuget\\packages\\selenium.webdriver\\4.38.0\\selenium.webdriver.4.38.0.nupkg.sha512",
+    "C:\\Users\\sthef\\.nuget\\packages\\serilog\\4.3.0\\serilog.4.3.0.nupkg.sha512",
+    "C:\\Users\\sthef\\.nuget\\packages\\serilog.sinks.console\\6.1.1\\serilog.sinks.console.6.1.1.nupkg.sha512",
+    "C:\\Users\\sthef\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
     "C:\\Users\\sthef\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
     "C:\\Users\\sthef\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
     "C:\\Users\\sthef\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",

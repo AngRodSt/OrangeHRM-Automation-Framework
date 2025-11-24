@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,16 @@ namespace Orangehrm_Automation.Pages.Base
         // Wait for element
         protected IWebElement WaitForElementVisible(By locator)
         {
-            return _wait.Until(ExpectedConditions.ElementIsVisible(locator));
+            try
+            {
+                
+                return _wait.Until(ExpectedConditions.ElementIsVisible(locator));
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Element not visible: {locator}");
+                throw;
+            }
 
         }
 
@@ -38,14 +48,30 @@ namespace Orangehrm_Automation.Pages.Base
         public abstract bool IsPageLoaded();
         protected void ClickElement(By locator)
         {
-            WaitForElementClickable(locator).Click();
+            try
+            {
+                WaitForElementClickable(locator).Click();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Failed to click element: {locator}");
+                throw;
+            }
         }
 
         protected void Type(By locator, string value)
         {
-            var element = WaitForElementVisible(locator);
-            element.Clear();
-            element.SendKeys(value);
+            try
+            { 
+                var element = WaitForElementVisible(locator);
+                element.Clear();
+                element.SendKeys(value);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"Failed to type in: {locator}");
+                throw;
+            }
         }
 
         protected string GetText(By locator)

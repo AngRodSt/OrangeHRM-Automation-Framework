@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using Orangehrm_Automation.Pages;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,18 +29,22 @@ namespace Orangehrm_Automation.StepDefinitions
         [Given(@"I am on the Admin page")]
         public void GivenImOnTheAdminPage()
         {
+            
             _adminPage.ClickAdminLink();
            
             if (!_adminPage.IsPageLoaded())
             {
+                Log.Error("Admin page did NOT load.");
                 throw new Exception("Login failed.");
             }
+
+            
         }
 
         // Verify that the system only shows records related to the search criteria
         [When(@"I search for a specific ""(.*)""")]
         public void WhenISearchForASpecific(string username)
-        {
+        {  
             _adminPage.EnterUsername(username);
             _adminPage.ClickSearchButton();
         }
@@ -47,11 +52,14 @@ namespace Orangehrm_Automation.StepDefinitions
         [Then(@"the results should only show users related to that ""(.*)""")]
         public void ThenTheResultsShouldOnlyShowUsersRelatedToThat(string username)
         {
+           
             var employeeNames = _adminPage.GetAllEmployeeNames();
             foreach (var name in employeeNames)
             {
+               
                 Assert.That(name, Does.Contain(username), $"The employee name {name} does not contain the username {username}");
             }
+            
         }
 
         // Verify that I can select all listed users at once

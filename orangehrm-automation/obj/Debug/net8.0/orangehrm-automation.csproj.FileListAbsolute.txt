@@ -191,3 +191,6 @@ C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangeh
 C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\obj\Debug\net8.0\orangehrm-automation.genruntimeconfig.cache
 C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\obj\Debug\net8.0\ref\orangehrm-automation.dll
 C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\obj\Debug\net8.0\orangehrm-automation.sourcelink.json
+C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\bin\Debug\net8.0\Serilog.dll
+C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\sthef\Documents\Programacion\QA Automation\orangehrm-automation\orangehrm-automation\bin\Debug\net8.0\Serilog.Sinks.File.dll
