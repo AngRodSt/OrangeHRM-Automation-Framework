@@ -11,6 +11,7 @@ namespace Orangehrm_Automation.Hooks
     public class Hooks
     {
         private readonly ScenarioContext _scenarioContext;
+
         private static ExtentReports _extent;
         private static ExtentTest _feature;
         private ExtentTest _scenario;
@@ -25,18 +26,24 @@ namespace Orangehrm_Automation.Hooks
                 _extent = ExtentManager.GetInstance();
         }
 
+
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
+            
+            if (_extent == null)
+                _extent = ExtentManager.GetInstance();
+
             _feature = _extent.CreateTest(featureContext.FeatureInfo.Title);
         }
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            Log.Information("Starting scenario: " + _scenarioContext.ScenarioInfo.Title);
+            var scenarioName = _scenarioContext.ScenarioInfo.Title;
+            Log.Information("Starting scenario: " + scenarioName);
 
-            _scenario = _feature.CreateNode(_scenarioContext.ScenarioInfo.Title);
+            _scenario = _feature.CreateNode(scenarioName);
 
             var driver = DriverFactory.CreateDriver();
             _scenarioContext["WebDriver"] = driver;
@@ -45,12 +52,15 @@ namespace Orangehrm_Automation.Hooks
         [AfterStep]
         public void AfterStep()
         {
+            string stepText = _scenarioContext.StepContext.StepInfo.Text;
+
             if (_scenarioContext.TestError == null)
             {
-                _scenario.Pass($"Step passed: {_scenarioContext.StepContext.StepInfo.Text}");
+                _scenario.Pass("Step passed: " + stepText);
             }
             else
             {
+                _scenario.Fail("Step failed: " + stepText);
                 _scenario.Fail(_scenarioContext.TestError.Message);
             }
         }
@@ -58,25 +68,22 @@ namespace Orangehrm_Automation.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            var scenarioTitle = _scenarioContext.ScenarioInfo.Title;
-            var driver = _scenarioContext["WebDriver"] as IWebDriver;
+            var title = _scenarioContext.ScenarioInfo.Title;
 
-            if (_scenarioContext.TestError != null)
+            if (_scenarioContext.ContainsKey("WebDriver"))
             {
-                Log.Error("Scenario failed: " + scenarioTitle);
+                var driver = _scenarioContext["WebDriver"] as IWebDriver;
 
-                string screenshotPath = ScreenshotHelper.TakeScreenshot(driver, scenarioTitle);
-
-                if (screenshotPath != null)
+                if (_scenarioContext.TestError != null)
                 {
-                    _scenario.AddScreenCaptureFromPath(screenshotPath);
-                    Log.Information($"Screenshot saved: {screenshotPath}");
+                    string screenshot = ScreenshotHelper.TakeScreenshot(driver, title);
+
+                    if (screenshot != null)
+                        _scenario.AddScreenCaptureFromPath(screenshot);
                 }
+
+                DriverFactory.QuitDriver();
             }
-
-            Log.Information("Ending scenario: " + scenarioTitle);
-
-            DriverFactory.QuitDriver();
         }
 
         [AfterTestRun]

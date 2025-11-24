@@ -9,7 +9,7 @@ public static class ExtentManager
     {
         if (_extent == null)
         {
-            var projectRoot = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.FullName;
+            var projectRoot = Directory.GetCurrentDirectory();
             var reportPath = Path.Combine(projectRoot, "Reports", "TestReport.html");
 
             var spark = new ExtentSparkReporter(reportPath);

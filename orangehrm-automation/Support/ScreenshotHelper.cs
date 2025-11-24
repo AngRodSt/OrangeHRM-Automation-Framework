@@ -13,8 +13,9 @@ namespace Orangehrm_Automation.Support
         {
             try
             {
-                var projectRoot = Directory.GetParent(AppContext.BaseDirectory).Parent.Parent.Parent.FullName;
+                var projectRoot = Directory.GetCurrentDirectory();
                 var screenshotsDir = Path.Combine(projectRoot, "Screenshots");
+
 
                 if (!Directory.Exists(screenshotsDir))
                     Directory.CreateDirectory(screenshotsDir);
