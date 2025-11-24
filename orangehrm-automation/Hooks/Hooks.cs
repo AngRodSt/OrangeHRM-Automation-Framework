@@ -2,36 +2,57 @@
 using Orangehrm_Automation.Drivers;
 using Orangehrm_Automation.Support;
 using Serilog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AventStack.ExtentReports;
+
 
 namespace Orangehrm_Automation.Hooks
 {
     [Binding]
     public class Hooks
     {
-        //ScenarioContext instead of static variables
-        ///Fully parallel-friendly
         private readonly ScenarioContext _scenarioContext;
+        private static ExtentReports _extent;
+        private static ExtentTest _feature;
+        private ExtentTest _scenario;
 
         public Hooks(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
 
-            // Initialize Logger once (Serilog)
-            Logger.Init(); 
+            Logger.Init();
+
+            if (_extent == null)
+                _extent = ExtentManager.GetInstance();
+        }
+
+        [BeforeFeature]
+        public static void BeforeFeature(FeatureContext featureContext)
+        {
+            _feature = _extent.CreateTest(featureContext.FeatureInfo.Title);
         }
 
         [BeforeScenario]
         public void BeforeScenario()
         {
             Log.Information("Starting scenario: " + _scenarioContext.ScenarioInfo.Title);
-            
+
+            _scenario = _feature.CreateNode(_scenarioContext.ScenarioInfo.Title);
+
             var driver = DriverFactory.CreateDriver();
             _scenarioContext["WebDriver"] = driver;
+        }
+
+        [AfterStep]
+        public void AfterStep()
+        {
+            if (_scenarioContext.TestError == null)
+            {
+                _scenario.Pass($"Step passed: {_scenarioContext.StepContext.StepInfo.Text}");
+            }
+            else
+            {
+                _scenario.Fail(_scenarioContext.TestError.Message);
+            }
         }
 
         [AfterScenario]
@@ -40,7 +61,6 @@ namespace Orangehrm_Automation.Hooks
             var scenarioTitle = _scenarioContext.ScenarioInfo.Title;
             var driver = _scenarioContext["WebDriver"] as IWebDriver;
 
-            // *** Screenshot on Failure ***
             if (_scenarioContext.TestError != null)
             {
                 Log.Error("Scenario failed: " + scenarioTitle);
@@ -48,9 +68,10 @@ namespace Orangehrm_Automation.Hooks
                 string screenshotPath = ScreenshotHelper.TakeScreenshot(driver, scenarioTitle);
 
                 if (screenshotPath != null)
+                {
+                    _scenario.AddScreenCaptureFromPath(screenshotPath);
                     Log.Information($"Screenshot saved: {screenshotPath}");
-                else
-                    Log.Warning("Failed to capture screenshot.");
+                }
             }
 
             Log.Information("Ending scenario: " + scenarioTitle);
@@ -58,5 +79,10 @@ namespace Orangehrm_Automation.Hooks
             DriverFactory.QuitDriver();
         }
 
+        [AfterTestRun]
+        public static void AfterTestRun()
+        {
+            _extent.Flush();
+        }
     }
 }

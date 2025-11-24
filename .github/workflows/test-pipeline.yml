@@ -51,3 +51,10 @@ jobs:
         with:
           name: Screenshots
           path: orangehrm-automation/Screenshots/
+
+      - name: Upload Extent Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExtentReport
+          path: Reports/
