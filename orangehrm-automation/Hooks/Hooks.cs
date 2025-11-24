@@ -4,7 +4,6 @@ using Orangehrm_Automation.Support;
 using Serilog;
 using AventStack.ExtentReports;
 
-
 namespace Orangehrm_Automation.Hooks
 {
     [Binding]
@@ -26,11 +25,10 @@ namespace Orangehrm_Automation.Hooks
                 _extent = ExtentManager.GetInstance();
         }
 
-
         [BeforeFeature]
         public static void BeforeFeature(FeatureContext featureContext)
         {
-            
+            // ✔ Necesario porque BeforeFeature corre ANTES del constructor
             if (_extent == null)
                 _extent = ExtentManager.GetInstance();
 
@@ -78,7 +76,8 @@ namespace Orangehrm_Automation.Hooks
                 {
                     string screenshot = ScreenshotHelper.TakeScreenshot(driver, title);
 
-                    if (screenshot != null)
+                    // ✔ aseguramos que el archivo existe antes de añadirlo
+                    if (File.Exists(screenshot))
                         _scenario.AddScreenCaptureFromPath(screenshot);
                 }
 

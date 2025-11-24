@@ -9,8 +9,12 @@ public static class ExtentManager
     {
         if (_extent == null)
         {
-            var projectRoot = Directory.GetCurrentDirectory();
-            var reportPath = Path.Combine(projectRoot, "Reports", "TestReport.html");
+            // ✔ Usamos tu PathHelper
+            var reportsDir = PathHelper.ReportsDir;
+
+            Directory.CreateDirectory(reportsDir);
+
+            var reportPath = Path.Combine(reportsDir, "TestReport.html");
 
             var spark = new ExtentSparkReporter(reportPath);
             spark.Config.DocumentTitle = "Automation Test Report";
