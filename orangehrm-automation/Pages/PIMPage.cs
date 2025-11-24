@@ -75,12 +75,16 @@ namespace Orangehrm_Automation.Pages
 
         public void SelectFirstEmployee()
         {
+            WaitForElementVisible(TableCheckbox);
             var allCheckboxes = Driver.FindElements(TableCheckbox);
             allCheckboxes[1].Click();
+            
+            
         }
 
         public bool IsFirstEmployeeSelected()
         {
+
             var allCheckboxes = Driver.FindElements(TableCheckbox);
             var first = allCheckboxes[1];
 
