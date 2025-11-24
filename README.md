@@ -12,6 +12,7 @@ The project demonstrates strong knowledge in:
 - Hooks & lifecycle management
 - Web tables, alerts, notifications, checkboxes, and popups
 - Clean, readable, natural-language test cases
+- Extent Reports, Screenshots and Serilog
 
 ---
 
