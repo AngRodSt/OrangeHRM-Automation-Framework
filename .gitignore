@@ -60,6 +60,7 @@ Reports/
 
 ## Coverage files
 coverage/
+screenshots/
 *.coverage
 *.coveragexml
 coverage.json

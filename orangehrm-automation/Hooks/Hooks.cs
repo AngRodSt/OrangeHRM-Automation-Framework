@@ -37,7 +37,23 @@ namespace Orangehrm_Automation.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            Log.Information("Ending scenario: " + _scenarioContext.ScenarioInfo.Title);
+            var scenarioTitle = _scenarioContext.ScenarioInfo.Title;
+            var driver = _scenarioContext["WebDriver"] as IWebDriver;
+
+            // *** Screenshot on Failure ***
+            if (_scenarioContext.TestError != null)
+            {
+                Log.Error("Scenario failed: " + scenarioTitle);
+
+                string screenshotPath = ScreenshotHelper.TakeScreenshot(driver, scenarioTitle);
+
+                if (screenshotPath != null)
+                    Log.Information($"Screenshot saved: {screenshotPath}");
+                else
+                    Log.Warning("Failed to capture screenshot.");
+            }
+
+            Log.Information("Ending scenario: " + scenarioTitle);
 
             DriverFactory.QuitDriver();
         }
